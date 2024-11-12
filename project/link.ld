@@ -5,7 +5,7 @@ MEMORY
 }
 
 STACK_SIZE = 0x2000;
-ENTRY(_reset)
+ENTRY(Reset_Handler)
 
 SECTIONS
 {
