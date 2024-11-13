@@ -33,7 +33,6 @@
 #define GPIOB_BSRR 0x48000418
 #define AHB2_CLOCK_ENABLER 0x4002104C
 
-
 int main()
 {
 	// Enable clock for GPIOB
@@ -48,7 +47,7 @@ int main()
 	// Set output speed register to medium speed
 	*(volatile uint32_t *) (GPIOB_OSPEEDR) &= ~(3 << 6); // clear bits 6-7
 	*(volatile uint32_t *) (GPIOB_OSPEEDR) |= (1 << 6); // set bit 6
-	
+
 	while(1)
 	{
 		*(volatile uint32_t *) (GPIOB_ODR) ^= (1 << 3);
